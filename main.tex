@@ -1,0 +1,52 @@
+% Arquivo de configurações gerais do documento
+% Estilo artigo, papel A4 e fonte padrão de 12pt
+\documentclass[12pt,a4paper]{article}
+
+% Configurações de encoding e idioma do trabalho
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+
+% Packages relacionados a fórmulas e símbolos matemáticos
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{steinmetz}
+
+% Inserção de imagens
+\usepackage{graphicx}
+
+% Formatação do documento
+\usepackage{indentfirst}
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\setlength{\parindent}{1.25cm} % Recúo primeira linha
+\onehalfspacing
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+\renewcommand{\arraystretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Hypertext
+\usepackage{hyperref}
+
+\input{macros}
+
+\begin{document}
+% Desabilita a contagem de páginas
+\pagenumbering{gobble}
+\include{capa}
+\include{rosto}
+\include{resumo}
+\tableofcontents\newpage
+\pagenumbering{arabic}\setcounter{page}{5}
+\include{intro}
+
+\include{referencias}
+\end{document}
